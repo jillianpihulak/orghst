@@ -61,7 +61,7 @@
                 <img src="img/old-farmhouse.jpg" alt="An old abandoned farmhouse in the middle of a field.">
             </section>
             <section data-scene="scene2">
-                <h2>scene 2</h2>
+                <h2>Friend, Oregon</h2>
             </section>
             <section data-scene="scene3">
                 <h2>scene 3</h2>
@@ -71,6 +71,7 @@
     </div>
 </div>
 <script type="text/javascript">
+
     var layers = {
         layer1: {
             layer: L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}'),
@@ -79,13 +80,6 @@
         layer2: {
             layer: L.geoJSON.ajax('assets/ghst.geojson')
 
-
-
-            /*L.geoJson.ajax('http://mapious.ceoas.oregonstate.edu/geoserver/mapious/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=ore_counties&outputFormat=application%2Fjson', {
-                color: 'orange',
-                weight: 5
-            }),
-            legend: '<i style="background: orange; opacity: 0.5"></i><p><b>legend 2</b></p>'*/
         },
         layer3: {
             layer: L.tileLayer('http://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png')
@@ -93,8 +87,12 @@
     };
     var scenes = {
         scene1: {lat: 44, lng: -123.5, zoom: 7, layers: ['layer2'], name: "Ghost Towns in Oregon"},
-        scene2: {lat: 44.5701158, lng: -123.2949388, zoom: 10, layers: ['layer2'], name: "scene 2"},
+        scene2: {lat: 45.3468, lng: -121.6670, zoom: 10, layers: ['layer2'], name: "Friend, Oregon"},
         scene3: {lat: 44.5701158, lng: -123.2949388, zoom: 12, layers: ['layer1', 'layer2'], name: "scene 3"}
+
+
+
+
 
 
         /*MAKE LAST SCENE CREDIT BO and his git/website and esri for icon http://webhelp.esri.com/arcgisexplorer/1500/en/gpsicons.htm*/

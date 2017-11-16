@@ -5,7 +5,7 @@ html {
 
 body {
     height: 100%;
-    font-family: Montserrat, sans-serif;
+    font-family: Montserrat, serif;
     font-size: 14px;
 }
 
@@ -25,7 +25,7 @@ body {
 h1 {
     margin: 20px;
     padding-top: 0px;
-    font-family: Libre Baskerville, sans-serif;
+    font-family: Libre Baskerville, serif;
     color: rgb(0, 0, 0);
     font-size: 50px;
 
@@ -266,7 +266,7 @@ video {
 
 
 .storymap-attribution {
-    font-family: Cairo, sans-serif;
+    font-family: Montserrat, serif;
     background: rgba(255, 255, 255, 0.6) !important;
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.2) ;
     border-radius: 2px;
@@ -288,7 +288,7 @@ video {
     top: 30px;
     display: none;
     color: #333333;
-    font-family: Cairo, sans-serif;
+    font-family: Montserrat, serif;
     padding: 6px 8px;
     background: rgba(255, 255, 255, 0.5);
     box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.2);
@@ -396,4 +396,7 @@ section {
 img {
     display:block;
     margin: 0 auto;
+}
+.storymap-story h2 {
+    font-family: Libre Baskerville, serif;
 }
