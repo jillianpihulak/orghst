@@ -71,7 +71,7 @@
                 <hr/>
                 <p>This is a paragraph about ghost towns in Oregon. Oooohhhh spoooky
                 explain what a ghost town is</p>
-                <img src="img/old-farmhouse.jpg" alt="An old abandoned farmhouse in the middle of a field.">
+                <img src="img/old-farmhouse.jpg" alt="An old abandoned farmhouse in the middle of a field." class>
             </section>
 
             <section data-scene="scene2">
@@ -127,17 +127,20 @@
         },
         layer3: {
             layer: L.tileLayer('http://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png')
-        }
+        },
+        layer4: {
+            layer: L.tileLayer('https://api.mapbox.com/styles/v1/jillianwashere/cj98qygj21rg02sp8byf9xxei/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiamlsbGlhbndhc2hlcmUiLCJhIjoiY2ozM2Y5MG4xMDBseTJxbXJhbDA4bjJqeCJ9.jbViok8QJjYYBsPVj43YKw')
+        },
     };
     var scenes = {
-        scene1: {lat: 44, lng: -123.5, zoom: 7, layers: ['layer2'], name: "Ghost Towns in Oregon"},
+        scene1: {lat: 44, lng: -123.5, zoom: 7, layers: ['layer2', 'layer4'], name: "Ghost Towns in Oregon"},
         scene2: {lat: 45.3468, lng: -121.6670, zoom: 10, layers: ['layer2'], name: "Friend"},
         scene3: {lat: 45.5590, lng: -122.5753, zoom: 10, layers: ['layer2'], name: "Bridal Veil"},
         scene4: {lat: 42.1741, lng: -123.3981, zoom: 10, layers: ['layer2'], name: "Buncom"},
-        scene5: {lat: 43.2791, lng: -119.3621, zoom: 10, layers: ['layer2'], name: "Narrows"},
+        scene5: {lat: 43.2791, lng: -119.3621, zoom: 8, layers: ['layer2'], name: "Narrows"},
         scene6: {lat: 45.3008, lng: -123.0589, zoom: 10, layers: ['layer2'], name: "New Era"},
         scene7: {lat: 44.5429, lng: -123.9721, zoom: 10, layers: ['layer2'], name: "Peak"},
-        scene8: {lat: 43.5751, lng: -122.9563, zoom: 12, layers: ['layer2'], name: "Bohemia City"}
+        scene8: {lat: 43.5751, lng: -122.9563, zoom: 9, layers: ['layer2'], name: "Bohemia City"}
     };
 
 
