@@ -74,8 +74,6 @@ h1 {
         width: 530px
         /*maybe align it in the middle???*/
 
-        /*MAKE BASE MAP RELIC*/
-
     }
 
 }
@@ -105,6 +103,11 @@ h1 {
 
     .storymap-scroll-down {
         display: none;
+    }
+
+    .storymap-story img {
+        display: block;
+
     }
 
 
@@ -390,4 +393,7 @@ section {
 
 /*my own styles*/
 
-
+img {
+    display:block;
+    margin: 0 auto;
+}
