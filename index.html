@@ -45,10 +45,23 @@
     <link rel="shortcut icon" href="img/house.ico" type="image/x-icon">
     <link rel="icon" href="img/house.ico" type="image/x-icon">
 
+    <!--social media-->
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
     <!--story map plugin-->
     <script src="assets/storymap.2.3.js"></script>
 </head>
 <body>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.11';
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 <div id="storymap" class="container-fluid">
     <div class="row">
         <div class="col-sm-6 col-md-8 storymap-map"></div>
@@ -62,31 +75,39 @@
             </section>
 
             <section data-scene="scene2">
-                <h2>Friend, Oregon</h2>
+                <h2>Friend</h2>
+                <hr/>
             </section>
 
             <section data-scene="scene3">
-                <h2>scene 3</h2>
+                <h2>Bridal Veil</h2>
+                <hr/>
+
             </section>
 
             <section data-scene="scene4">
-                <h2>scene 3</h2>
+                <h2>Buncom</h2>
+                <hr/>
             </section>
 
             <section data-scene="scene5">
-                <h2>scene 3</h2>
+                <h2>Narrows</h2>
+                <hr/>
             </section>
 
             <section data-scene="scene6">
-                <h2>scene 3</h2>
+                <h2>New Era</h2>
+                <hr/>
             </section>
 
             <section data-scene="scene7">
-                <h2>scene 3</h2>
+                <h2>Peak</h2>
+                <hr/>
             </section>
 
             <section data-scene="scene8">
-                <h2>scene 3</h2>
+                <h2>Bohemia City</h2>
+                <hr/>
             </section>
 
         </div>
@@ -123,9 +144,9 @@
 
 
         /*MAKE LAST SCENE CREDIT BO and his git/website and esri for icon http://webhelp.esri.com/arcgisexplorer/1500/en/gpsicons.htm*/
-        <!--<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>-->
-
-
+        <!--<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a>-->
+<!--<div class="fb-share-button" data-href="https://jillianpihulak.github.io/orghst/" data-layout="button" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjillianpihulak.github.io%2Forghst%2F&amp;src=sdkpreparse">Share</a></div>-->
+        /*<div class="g-plus" data-action="share" data-height="24" data-href="https://jillianpihulak.github.io/orghst/"></div>*/
     };
     $('#storymap').storymap({
         scenes: scenes,
