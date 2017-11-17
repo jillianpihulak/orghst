@@ -107,6 +107,8 @@ h1 {
 
     .storymap-story img {
         display: block;
+        max-width: 100%;
+        height: auto;
 
     }
 
@@ -399,4 +401,9 @@ img {
 }
 .storymap-story h2 {
     font-family: Libre Baskerville, serif;
+}
+
+.center {
+    margin: auto;
+    width: 50%;
 }
