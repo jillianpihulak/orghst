@@ -70,9 +70,8 @@
                 <h1>Ghost Towns in Oregon</h1>
                 <hr/>
                 <p>This is a paragraph about ghost towns in Oregon. Oooohhhh spoooky
-                explain what a ghost town is</p>
-                <h3>MAKE THIS IMAGE RESPONSIVE https://www.w3schools.com/css/css_rwd_images.asp</h3>
-                <img src="img/old-farmhouse.jpg" alt="An old abandoned farmhouse in the middle of a field." class>
+                    explain what a ghost town is</p>
+                <img src="img/old-farmhouse.jpg" alt="An old abandoned farmhouse in the middle of a field.">
             </section>
 
             <section data-scene="scene2">
@@ -83,75 +82,130 @@
             <section data-scene="scene3">
                 <h2>Bridal Veil</h2>
                 <hr/>
+                <p>The former lumber town of Bridal Veil was established in 1880 during a logging boom.
+                Today it remains an active</p>
 
             </section>
 
             <section data-scene="scene4">
                 <h2>Buncom</h2>
                 <hr/>
+                <p>Buncom lies to the southwest of Medford in southern Oregon. It was first settled
+                in 1852 after the discovery of gold near Jacksonville. The name is thought to come from
+                the way many Chinese settlers in the area pronounced a white settlers name. However,
+                in 1918 the post office that was established just 22 years earlier as the gold ran out.
+                Many of the remaining settlers moved to Jacksonville and Medford nearby. Few old houses
+                and the post office still stand.</p>
+                <a href="http://pnwphotoblog.com/ghost-town-buncom-oregon/"><img src="img/buncom.jpg" alt="A dilapidated old building--once the Buncom Post Office--stands along a road."></a>
+
             </section>
 
             <section data-scene="scene5">
                 <h2>Narrows</h2>
                 <hr/>
+                <p>The ghost town of Narrows sits just south of Burns in southeastern Oregon. It was named for its geographical
+                location between two lakes, Malheur containing freshwater and Harney which is undrinkable. One of its first settlers,
+                    Charles A. Haines, hoped to establish a cattle ranch between the two lakes and built his house there. It became a popular resting place
+                    between Burns to the north and Frenchglen to the south. However, when the road between the two was paved, travelers no longer found
+                    it necessary to stop in Narrows, and the town's population declined. The demise was finalized when the town hotel burned to the ground.
+                </p>
+                <a href="https://www.fws.gov/refuge/malheur/about/geology.html"><img src="img/narrows.jpg" alt="A map of Harney Lake and Lake Malheur."></a>
             </section>
 
             <section data-scene="scene6">
                 <h2>New Era</h2>
                 <hr/>
+                <p>New Era is a ghost town in western Clackamas County, a surprisingly urban setting for a ghost town. The ghost town sits between current day Oregon City and Canby, which are both
+                active towns with 36,000 and 17,500 people respectively. A post office was established in
+                    the area in the 1850s, however the origin of the name "New Era" is unclear. Many sources incorrectly
+                    cite the New Era Spiritualist Camp established in 1873, but the religious group came after
+                    the name of the town. Settlers were drawn to the town because of the abundance of water due
+                    to numerous streams in the area which allowed for industrial growth. To add to the mystery of its origins,
+                its decline is just as nebulous; the post office closed in 1940 without reason (according to sources).</p>
+                <a href="https://www.neweraspiritual.com/about-us.html"><img src="img/newera.jpg" alt="A gathering of the New Era Spiritualists in 1909."></a>
             </section>
 
             <section data-scene="scene7">
                 <h2>Peak</h2>
                 <hr/>
+                <p>Peak is a ghost town near Marys Peak in Benton County. White settlers came to the area and established the community
+                    in 1898 with a post office, a school, a church, and cedar shingle mill that provided
+                    income for the community. The post office closed down in 1917 after the construction of
+                    a highway from Corvallis to Newport that bypassed the town. Now, only a cemetery with 12
+                    graves survives.
+                     </p>
+                <a href="http://www.bentoncountymuseum.org/index.php/exhibitions/online-exhibitions/marys-peak/"><img src="img/peak.jpg" alt="The Peak post office, circa 1910."></a>
             </section>
 
             <section data-scene="scene8">
                 <h2>Bohemia City</h2>
                 <hr/>
+                <p>Bohemia City was a mining town in the southern Cascade Range. A Czech immigrant
+                    James "Bohemia" Johnson, the namesake of the town, discovered gold in the area in
+                    1863. The settlement of Bohemia City and a gold mine were established in 1886.
+                    The now ghost town is situated in the middle of the <a href="https://en.wikipedia.org/wiki/Bohemia_mining_district">Bohemia Mining District</a>,
+                    the most productive mining area in the Western Cascades.
+                    Currently, a few buildings and dilapidated mining equipment remain.
+                </p>
+                <a href="https://www.flickr.com/photos/36241830@N06/3825564458/in/photostream/"><img src="img/champion.jpg" alt="The Champion Mine Hotel"></a>
             </section>
 
+            <section data-scene="scene9">
+            <h2>Credits</h2>
+            <hr/>
+            </section>
         </div>
 
     </div>
 </div>
 <script type="text/javascript">
 
+
+    function style(feature) {
+        return {
+            fillColor: setColor(feature.properties.count),
+            fillOpacity: 0.7,
+            weight: 3,
+            opacity: 1,
+            color: '#708090',
+            dashArray: '6'
+        };
+    }
     var layers = {
         layer1: {
             layer: L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}'),
             legend: '<i style="background: black; opacity: 0.5"></i><p><b>legend 1</b></p>'
         },
         layer2: {
-            layer: L.geoJSON.ajax('assets/ghst.geojson')
-
+            layer: L.geoJSON.ajax('assets/ghst.geojson'),
+            onEachFeature: function (feature, layer) {
+                layer.bindPopup(feature.properties.name);
+            }
         },
         layer3: {
             layer: L.tileLayer('http://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png')
         },
         layer4: {
             layer: L.tileLayer('https://api.mapbox.com/styles/v1/jillianwashere/cj98qygj21rg02sp8byf9xxei/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiamlsbGlhbndhc2hlcmUiLCJhIjoiY2ozM2Y5MG4xMDBseTJxbXJhbDA4bjJqeCJ9.jbViok8QJjYYBsPVj43YKw')
-        },
+        }
     };
     var scenes = {
         scene1: {lat: 44, lng: -123.5, zoom: 7, layers: ['layer2', 'layer4'], name: "Ghost Towns in Oregon"},
-        scene2: {lat: 45.3468, lng: -121.6670, zoom: 10, layers: ['layer2'], name: "Friend"},
-        scene3: {lat: 45.5590, lng: -122.5753, zoom: 10, layers: ['layer2'], name: "Bridal Veil"},
-        scene4: {lat: 42.1741, lng: -123.3981, zoom: 10, layers: ['layer2'], name: "Buncom"},
-        scene5: {lat: 43.2791, lng: -119.3621, zoom: 8, layers: ['layer2'], name: "Narrows"},
-        scene6: {lat: 45.3008, lng: -123.0589, zoom: 10, layers: ['layer2'], name: "New Era"},
-        scene7: {lat: 44.5429, lng: -123.9721, zoom: 10, layers: ['layer2'], name: "Peak"},
-        scene8: {lat: 43.5751, lng: -122.9563, zoom: 9, layers: ['layer2'], name: "Bohemia City"}
+        scene2: {lat: 45.3468, lng: -121.6670, zoom: 10, layers: ['layer2', 'layer4'], name: "Friend"},
+        scene3: {lat: 45.5590, lng: -122.5753, zoom: 10, layers: ['layer2', 'layer4'], name: "Bridal Veil"},
+        scene4: {lat: 42.1741, lng: -123.3981, zoom: 10, layers: ['layer2', 'layer4'], name: "Buncom"},
+        scene5: {lat: 43.2791, lng: -120.5621, zoom: 8, layers: ['layer2', 'layer4'], name: "Narrows"},
+        scene6: {lat: 45.3008, lng: -123.0589, zoom: 10, layers: ['layer2', 'layer4'], name: "New Era"},
+        scene7: {lat: 44.5429, lng: -123.9721, zoom: 10, layers: ['layer2', 'layer4'], name: "Peak"},
+        scene8: {lat: 43.5751, lng: -123.4563, zoom: 9, layers: ['layer2', 'layer4'], name: "Bohemia City"},
+        scene9: {lat: 42.1741, lng: -123.3981, zoom: 10, layers: ['layer2', 'layer4'], name: "Credits"}
     };
 
 
-
-
-        /*MAKE LAST SCENE CREDIT BO and his git/website and esri for icon http://webhelp.esri.com/arcgisexplorer/1500/en/gpsicons.htm*/
+    /*MAKE LAST SCENE CREDIT BO and his git/website and esri for icon http://webhelp.esri.com/arcgisexplorer/1500/en/gpsicons.htm*/
     /*    <!--<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a>-->*/
-/*<!--<div class="fb-share-button" data-href="https://jillianpihulak.github.io/orghst/" data-layout="button" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjillianpihulak.github.io%2Forghst%2F&amp;src=sdkpreparse">Share</a></div>-->
-        /!*<div class="g-plus" data-action="share" data-height="24" data-href="https://jillianpihulak.github.io/orghst/"></div>*!/*/
-
+    /*<!--<div class="fb-share-button" data-href="https://jillianpihulak.github.io/orghst/" data-layout="button" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjillianpihulak.github.io%2Forghst%2F&amp;src=sdkpreparse">Share</a></div>-->
+            /!*<div class="g-plus" data-action="share" data-height="24" data-href="https://jillianpihulak.github.io/orghst/"></div>*!/*/
     $('#storymap').storymap({
         scenes: scenes,
         layers: layers,
