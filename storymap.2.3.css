@@ -373,24 +373,13 @@ nav li a,
     }
 }
 
+/*
 section {
     color: rgba(28, 28, 28, 0.6);
     background: rgba(204, 204, 204, 0.56);
     opacity: 1 !important;
 }
-
-#overlay {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0,0,0,0.5);
-    z-index: 2;
-    cursor: pointer;
-}
+*/
 
 
 /*my own styles*/
@@ -423,4 +412,10 @@ img {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.cover hr{
+    width:810px;
+    margin:1%;
+    border-width: 2px;
 }

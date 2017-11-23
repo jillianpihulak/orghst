@@ -154,7 +154,7 @@
             }
 
 
-            $(".storymap-map .leaflet-control-attribution")
+            /*$(".storymap-map .leaflet-control-attribution")
                 .addClass("storymap-attribution")
                 .html("<a href='https://github.com/jakobzhao/storymap'><img src='http://jakobzhao.github.io/storymap/img/logo.png' width='18px' target='_blank' > storymap.js </a>");
 
@@ -163,7 +163,7 @@
                 $(".storymap-attribution").find("a").prepend(settings.credits + " | ");
 
 
-            }
+            }*/
 
             if (settings.navbar && nav.length > 0) {
 
