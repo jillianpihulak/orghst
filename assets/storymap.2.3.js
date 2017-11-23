@@ -8,7 +8,7 @@
 
         var defaults = {
             selector: '[data-scene]',
-            triggerpos: '33.333%',
+            triggerpos: '20%',
             navbar: false,
             navwidget: false,
             legend: true,
@@ -22,7 +22,6 @@
                 L.tileLayer('http://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}@2x.png').addTo(map);
                 return map;
             }
-
         };
 
         var settings = $.extend(defaults, options);
@@ -76,8 +75,8 @@
                 }
 
                 if (section.height() <= $(window).height() * 0.33) {
-                    section.height($(window).height() * 0.33)
-                }
+                     section.height($(window).height() * 0.33)
+                 }
 
 
             });
@@ -155,12 +154,16 @@
             }
 
 
+            /*$(".storymap-map .leaflet-control-attribution")
+                .addClass("storymap-attribution")
+                .html("<a href='https://github.com/jakobzhao/storymap'><img src='http://jakobzhao.github.io/storymap/img/logo.png' width='18px' target='_blank' > storymap.js </a>");
+
 
             if (settings.credits) {
                 $(".storymap-attribution").find("a").prepend(settings.credits + " | ");
 
 
-            }
+            }*/
 
             if (settings.navbar && nav.length > 0) {
 

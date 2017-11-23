@@ -23,7 +23,7 @@ body {
 }
 
 h1 {
-    margin: 20px;
+    margin: 5px;
     padding-top: 0px;
     font-family: Libre Baskerville, serif;
     color: rgb(0, 0, 0);
@@ -373,24 +373,13 @@ nav li a,
     }
 }
 
+/*
 section {
     color: rgba(28, 28, 28, 0.6);
     background: rgba(204, 204, 204, 0.56);
     opacity: 1 !important;
 }
-
-#overlay {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0,0,0,0.5);
-    z-index: 2;
-    cursor: pointer;
-}
+*/
 
 
 /*my own styles*/
@@ -399,6 +388,10 @@ img {
     display:block;
     margin: 0 auto;
 }
+
+.storymap-story p {
+    margin:10px;
+}
 .storymap-story h2 {
     font-family: Libre Baskerville, serif;
 }
@@ -406,4 +399,17 @@ img {
 .center {
     margin: auto;
     width: 50%;
+}
+
+.bg {
+    /* The image used */
+    background-image: url("img_girl.jpg");
+
+    /* Full height */
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
